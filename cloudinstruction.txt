@@ -1,0 +1,37 @@
+sign up on 
+
+https://console.ng.bluemix.net/
+
+----------------
+
+goto installer-windows-amd64.zip and upnip it
+
+open installer-windows-amd64 folder -- duoble click cf_installer.exe to install it
+
+open windows commmand line with admin privileges
+
+connect to cloud foundry (Bluemix)
+
+-->> cf api https://api.eu-gb.bluemix.net
+
+login to Bluemix
+
+-->>cf login -u <yourIBMBluemix_UserName>
+
+enter password when prompted : make sure to type the password and press enter. you will not find any thing like ** chars while typing password.
+
+add your target container where your application will be deployed on cloud. default is "dev"
+
+-->> cf target -o <yourIBMBluemix_UserName> -s dev
+
+push your app on cloud
+
+-->> cf push <YourUniqueAppName> -p <YourProject.war>
+
+you will find your application url in cloud 
+
+logout from cloud
+
+-->> cf logout
+
+
